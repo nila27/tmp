@@ -7,4 +7,4 @@
 - [Java](./language/java/README.md)
 
 # C++ Articles
-- [Hello World](./hello-world.md)
+- [Hello World](./test/1st.md)
