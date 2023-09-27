@@ -12,10 +12,10 @@
 # Windows
 - Injection
   - Classic Dll Injection
-    - [Kor](./windows/ClassicDllInjection/kor.md)
+    - [Kor](./windows/Injection/ClassicDllInjection/kor.md)
    
 - Access Token Manipulation
   - ParentPidSpoofing
-    - [Kor](./windows/ClassicDllInjection/kor.md) 
+    - [Kor](./windows/AccessToken/ParentPidSpoofing/kor.md) 
 
 
