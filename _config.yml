@@ -1,7 +1,3 @@
 title: test blog
 description: test test
 theme: minima
-
-
-include:
-  - "_includes/custom-head.html"
