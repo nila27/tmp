@@ -5,7 +5,7 @@
   <div class="collapsible-content">
 
 [Language Main](./language/README.md)  
-- [C++](./language/c++/README.md)  
+- [C++ ](./language/c++/README.md)  
 - [Python](./language/python/README.md)  
 - [Java](./language/java/README.md)  
 
