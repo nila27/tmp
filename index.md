@@ -16,6 +16,6 @@
    
 - Access Token Manipulation
   - ParentPidSpoofing
-    - [Kor](./windows/AccessToken/ParentPidSpoofing/kor.md) 
+    - [Kor](./windows/AccessTokenManipulation/ParentPidSpoofing/kor.md) 
 
 
