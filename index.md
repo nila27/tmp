@@ -3,11 +3,11 @@
 <div class="collapsible">
   <button class="collapsible-button">Expand Language</button>
   <div class="collapsible-content">
-    
-- [Language Main](./language/README.md)
-    - [C++](./language/c++/README.md)
-    - [Python](./language/python/README.md)
-    - [Java](./language/java/README.md)
+
+[Language Main](./language/README.md)  
+- [C++](./language/c++/README.md)  
+- [Python](./language/python/README.md)  
+- [Java](./language/java/README.md)  
 
   </div>
 </div>
