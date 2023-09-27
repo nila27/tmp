@@ -8,4 +8,3 @@
 
 # C++ Articles
 - [Hello World](./test/1st.md)
-can you update it possible?
