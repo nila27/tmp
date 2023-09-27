@@ -10,11 +10,12 @@
 - [Hello World](./test/1st.md)
 - 
 # Windows
-- Classic Dll Injection
-  - [Kor](./windows/ClassicDllInjection/kor.md)
-  
-# Windows
-- Classic Dll Injection
-  - [Kor] (./test/1st.md)
-  -
-  - (./windows/ClassicDllInjection/kor.md)
+- Injection
+  - Classic Dll Injection
+    - [Kor](./windows/ClassicDllInjection/kor.md)
+   
+- Access Token Manipulation
+  - ParentPidSpoofing
+    - [Kor](./windows/ClassicDllInjection/kor.md) 
+
+
