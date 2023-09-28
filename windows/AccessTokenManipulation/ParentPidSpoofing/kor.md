@@ -24,7 +24,7 @@ Windows internals 7th Part 1의 Chapter 7 Security - User Account Control And vi
 관리자 권한으로 실행시 AIS(Application Information Service)
 
 
-참고 :  - [Kor](./windows/Tracing/ETW/Windows_Kernel_Trace/Process/kor.md) 
+참고 :  - [Kor](/tmp/windows/Tracing/ETW/Windows_Kernel_Trace/Process/kor.md) 
 
 4. 구현
 코드는 제작중인 분탕 프로젝트의 코드를 참조한다. - https://github.com/Ddatg30/Buntang
