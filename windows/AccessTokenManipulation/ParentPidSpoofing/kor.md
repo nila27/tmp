@@ -24,9 +24,10 @@ Windows internals 7th Part 1의 Chapter 7 Security - User Account Control And vi
 관리자 권한으로 실행시 AIS(Application Information Service)
 
 
-참고 :  - [Kor](../../Tracing/ETW/Windows_Kernel_Trace/Process/kor.md) 
+참고 :  - [ETW 설명](../../Tracing/ETW/Windows_Kernel_Trace/Process/kor.md) 
 
-4. 구현
+
+3. 구현
 코드는 제작중인 분탕 프로젝트의 코드를 참조한다. - https://github.com/Ddatg30/Buntang
 
 ```cpp
@@ -77,9 +78,37 @@ DWORD AccessTokenManipulation::ParentPidSpoofing(DWORD parent_proc_infod, const 
 모든 if 문에 else로 return ::GetLastError(); 코드를 넣지 않았다.
 해당 부분은 웬만해서는 에러가 일어나지 않기 때문이다.
 
-3. 탐지
+4.  해설
+InitializeProcThreadAttributeList로 프로세스 특성 설정 후 
+UpdateProcThreadAttribute로 특성 설정 세팅 한 뒤 CreateProcessW로 프로세스 생성
+
+spoofing 할 process를 CreateProcessW를 통해 생성 할 때 CREATE_NEW_CONSOLE이나 CREATE_NO_WINDOW flag를 주지않으면 0xC0000142 에러가 발생한다.
 
 
+
+6.  현재 문제점
+- UWP 앱에는 parent pid spoofing 행위를 하면 제약이 많다.
+- spoofing 한 process가 createprocess를 호출하면 에러가 생긴다.
+createprocess만 에러가 생기는것인지, 아니면 kernelbase를 통한 호출하는 모든 winapi들이 문제가 생기는 것인지 확인해야 한다.
+![Description of Image](/tmp/windows/AccessTokenManipulation/ParentPidSpoofing/svchost.PNG)
+
+kernelbase를 통하지 않는 ShellExecuteEx()나 NtCreateUserProcess()등을 호출해서 생성하는 경우에는 에러가 발생하지 않는다.
+
+
+
+6.  활용
+악성 프로그램을 spoof 프로세스로 이용
+정상 프로그램을 spoof 프로세스로 만든 후 해당 프로세스에 인젝션
+
+
+
+8.  탐지
+
+7.1 etw
+
+7.2 dtrace
+
+7.3 kernel driver (PsSetCreateProcessNotifyRoutineEx)
 
 
 더 연구해야 할 사항
