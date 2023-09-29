@@ -89,7 +89,8 @@ spoofing 할 process를 CreateProcessW를 통해 생성 할 때 CREATE_NEW_CONSO
 6.  현재 문제점
 - UWP 앱에는 parent pid spoofing 행위를 하면 제약이 많다.
 - spoofing 한 process가 createprocess를 호출하면 에러가 생긴다.
-createprocess만 에러가 생기는것인지, 아니면 kernelbase를 통한 호출하는 모든 winapi들이 문제가 생기는 것인지 확인해야 한다.
+createprocess만 에러가 생기는것인지,
+아니면 kernelbase를 통한 호출하는 모든 winapi들이 문제가 생기는 것인지 확인해야 한다.
 
 ![Description of Image](./parentpidspoofing_createprocess_error.PNG)
 
