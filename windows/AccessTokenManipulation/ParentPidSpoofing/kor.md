@@ -104,8 +104,19 @@ kernelbase를 통하지 않는 ShellExecuteEx()나 NtCreateUserProcess()등을 �
 
 
 8.  탐지
-
+Creator process와 Parent Process가 다른것을 찾아내면 된다.
+ 
 7.1 etw
+
+Windows Kernel Trace {9E814AAD-3204-11D2-9A82-006008A86939} GUID를 활용한다.
+
+EVENT_RECORD.EVENT_HEADER.ProcessId가 Creator process이다.
+Event가 프로세스인 이벤트에서 EventTypeName이 "Start"(1)인 Process_TypeGroup1에서 ParentId가 Parent process이다.
+
+
+![Description of Image](./pps_example.PNG)
+노란색으로 칠한 providers의 pid가 Creator process이고
+properties의 parentpid가 Parent process이다.
 
 7.2 dtrace
 
